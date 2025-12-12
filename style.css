@@ -175,7 +175,7 @@ body::before{
   transform-origin: -180px 0px; /* yarıçap (ayarla) */
   transition:transform 1s ease;
 }
-.orbit img{width:50px;height:160px;object-fit:cover;border-radius:14px;box-shadow:0 14px 30px rgba(0,0,0,0.6)}
+.orbit img{width:120px;height:160px;object-fit:cover;border-radius:14px;box-shadow:0 14px 30px rgba(0,0,0,0.6)}
 
 /* farklı başlangıç açılarıyla yerleştiriyoruz */
 .orbit1{ transform: rotate(0deg) translateX(200px) rotate(0deg) }
@@ -201,4 +201,5 @@ body::before{
   .center-photo{ width:120px; height:120px }
   .message-box{ width:92% }
 }
+
 
