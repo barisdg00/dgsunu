@@ -169,7 +169,7 @@ body::before{
 /* her orbit element merkez etrafında dönüyor; foto boyutu ayarında */
 .orbit{
   position:absolute;
-  width:120px; height:160px; /* dikey foto için biraz daha yüksek */
+  width:50px; height:160px; /* dikey foto için biraz daha yüksek */
   left:50%; top:50%;
   margin-left:-60px; margin-top:-80px;
   transform-origin: -180px 0px; /* yarıçap (ayarla) */
@@ -201,5 +201,66 @@ body::before{
   .center-photo{ width:120px; height:120px }
   .message-box{ width:92% }
 }
+/* (4) FOTO ZOOM */
+@keyframes slowZoom{
+  from{transform:scale(1);}
+  to{transform:scale(1.08);}
+}
 
+/* (5) KELİME VURGULARI */
+.hl{color:#ff8fb1;font-weight:600;}
+.glow{text-shadow:0 0 12px rgba(255,120,160,.8);}
 
+/* (6) YILDIZ */
+.star{
+  position:fixed;
+  width:4px;height:4px;
+  background:white;
+  border-radius:50%;
+  box-shadow:0 0 12px white;
+  animation:starPop 2s ease-out;
+}
+@keyframes starPop{
+  from{transform:scale(0);opacity:1;}
+  to{transform:scale(1.6);opacity:0;}
+}
+
+/* (8) GERİ BUTONU */
+.back-btn{
+  position:fixed;
+  bottom:16px;
+  left:12px;
+  opacity:.3;
+  background:none;
+  border:none;
+  color:white;
+  font-size:22px;
+}
+
+/* MOBİL DOKUNMA */
+body{touch-action:manipulation;}
+/* ====== YILDIZ TOZU ARKA PLAN ====== */
+.star {
+  position: fixed;
+  top: -10px;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: starFall linear infinite;
+  pointer-events: none;
+  z-index: 0;
+  filter: drop-shadow(0 0 6px rgba(255,255,255,0.8));
+}
+
+@keyframes starFall {
+  from {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(110vh) scale(0.6);
+    opacity: 0;
+  }
+}
